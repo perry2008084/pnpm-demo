@@ -1,27 +1,36 @@
 # PnpmDemo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
+angular monorepo demo by pnpm
 
-## Development server
+angular单仓库示例，使用pnpm进行管理
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## run
 
-## Code scaffolding
+### 安装pnpm
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```
+npm i -g pnpm
+```
 
-## Build
+### 调试
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```
+# 启动app-one
+pnpm start:app-one
 
-## Running unit tests
+# 启动app-two
+pnpm start:app-two
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### 编译
 
-## Running end-to-end tests
+```
+# 编译所有应用和库
+pnpm build
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+# 编译lib-a
+pnpm build:lib-a
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# 编译lib-b
+pnpm build:lib-b
+```
